@@ -1,23 +1,57 @@
+/* Reset the default margins and ensure the entire viewport is used */
+html,
+body,
 .App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Set the video as a full-screen background */
+.background-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  /* Send the video behind other UI elements */
+}
+
+.background-video {
+  object-fit: cover;
+  /* Ensure the video stretches and scales correctly */
+  width: 100%;
+  height: 100%;
+}
+
+/* Main UI Content */
+.main-content {
+  position: relative;
+  z-index: 1;
+  /* Ensure content stays visible on top of the video */
   text-align: center;
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  color: white;
 }
 
 h1 {
-  color: #4caf50;
+  color: #fff;
   font-size: 48px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .tiles {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 35px;
   margin: 20px 0;
 }
 
 .tile {
-  background-color: #f9c74f;
+  background-color: #f9d14f;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
@@ -37,7 +71,7 @@ h1 {
 }
 
 .tile.disabled {
-  background-color: #d3d3d3;
+  background-color: #353131;
   cursor: not-allowed;
   transform: none;
 }
@@ -45,10 +79,10 @@ h1 {
 .topic-display {
   margin-top: 20px;
   padding: 20px;
-  background-color: #90be6d;
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  font-size: 36px; /* Increased the font size for better readability */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+  font-size: 60px;
   font-weight: bold;
 }
