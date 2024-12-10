@@ -54,7 +54,6 @@ const App: React.FC = () => {
         </div>
         {selectedTopic && (
           <div className="topic-display">
-            <h2>Topic:</h2>
             <p>{selectedTopic}</p>
           </div>
         )}
