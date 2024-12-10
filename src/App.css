@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  color: #4caf50;
+  font-size: 48px;
+}
+
+.tiles {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.tile {
+  background-color: #f9c74f;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.tile:hover {
+  transform: scale(1.1);
+  background-color: #f3722c;
+}
+
+.tile.disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.topic-display {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #90be6d;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 36px; /* Increased the font size for better readability */
+  font-weight: bold;
+}
